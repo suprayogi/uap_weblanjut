@@ -1,0 +1,22 @@
+mysql -u root -p
+Enter password:
+
+create database db_uap0003;
+
+use db_uap0003;
+
+CREATE TABLE table_barang (
+  kode_barang varchar(4) NOT NULL,
+  nama_barang varchar(25) NOT NULL,
+  harga_barang int(8) NOT NULL,
+  jumlah_barang int(4) NOT NULL,
+  PRIMARY KEY (kode_barang)
+);
+
+CREATE TABLE `table_barang_masuk` (
+  `kode_barang_masuk` varchar(5) NOT NULL,
+  `kode_barang` varchar(4) NOT NULL,
+  `nama_barang` varchar(20) NOT NULL,
+  `jumlah_barang_masuk` int(5) NOT NULL,
+  PRIMARY KEY (kode_barang_masuk)
+);
